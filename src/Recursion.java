@@ -1,4 +1,7 @@
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Recursion {
 
@@ -17,7 +20,6 @@ public class Recursion {
 
 
     //1. Skapa File object
-
     public static long directorySizeCalc(String path)
     {
         long totalSize = 0;
@@ -49,6 +51,55 @@ public class Recursion {
     }
 
 
+
+    //This method should return the factorial of n
+    public static int factorial(int n){
+        int total = 1;
+        if(n < 0)
+        {
+          throw new IllegalArgumentException("Please enter a non negative int number");
+        }
+        if (n == 0)
+        {
+           return total;
+        }
+        else
+        {
+          return n* factorial(n-1);
+        }
+
+    }
+
+
+    //Find all permutations for a given string
+    public static List<String> permutation(String s)
+    {
+        //base case
+        if(s.isEmpty())
+        {
+            List<String> empty = new ArrayList<>();
+            empty.add("");
+            return  empty;
+        }
+
+        List<String> permutations = new ArrayList<>();
+
+        for(int i = 0; i < s.length(); i++)
+        {
+            char fixed = s.charAt(i);
+            String remainingChar = s.substring(0,i) + s.substring(i+1);
+
+            List<String> subPermutations = permutation(remainingChar);
+
+
+            for(String p : subPermutations)
+            {
+                permutations.add(fixed+ p);
+            }
+        }
+
+        return permutations;
+    }
 
 
 

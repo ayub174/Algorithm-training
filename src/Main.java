@@ -11,7 +11,7 @@ public class Main {
 //
 
 
-        System.out.println(Recursion.permutation(""));
+        System.out.println(Recursion.permutation("abc"));
 
        /* int[] arr = new int[10];
         Sorting.populateArr(arr);
