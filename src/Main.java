@@ -6,9 +6,12 @@ public class Main {
 
 
     public static void main(String[] args) {
+//
+//   System.out.println(Recursion.
+//
 
-   System.out.println(Recursion.
-           directorySizeCalc("/Users/ayubabdulkadir/Downloads/"));
+
+        System.out.println(Recursion.permutation(""));
 
        /* int[] arr = new int[10];
         Sorting.populateArr(arr);
