@@ -105,4 +105,25 @@ public class Recursion {
 
 
 
+
+    //rekusivt räkna ut summan av alla talen i en Array.
+
+    public static int recursiveSumFunction(int[] numbers)
+    {
+        //Hålla värdet av summan
+        int sum = 0;
+
+        //base case
+        if(numbers.length < 1)
+        {
+            return 0;
+        } else {
+            sum += recursiveSumFunction(numbers);
+        }
+
+            return sum;
+    }
+
+
+
 }
